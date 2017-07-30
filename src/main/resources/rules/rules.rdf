@@ -1,0 +1,234 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+<!ENTITY dct "http://purl.org/dc/terms/" >
+<!ENTITY dcDoc "http://dublincore.org/documents/dcmi-terms/">
+<!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
+<!ENTITY dcat "http://www.w3.org/ns/dcat#" >
+<!ENTITY adms "http://www.w3.org/ns/adms#" >
+<!ENTITY vann "http://purl.org/vocab/vann/" >
+<!ENTITY xh "http://www.w3.org/1999/xhtml" >
+<!ENTITY xhv "http://www.w3.org/1999/xhtml/vocab#">
+<!ENTITY cc "http://creativecommons.org/ns#" >
+<!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+<!ENTITY v "http://www.w3.org/2006/vcard/ns#" >
+<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+<!ENTITY sdmx "http://purl.org/linked-data/sdmx#" >
+<!ENTITY qb "http://purl.org/linked-data/cube#" >
+<!ENTITY wdrs "http://www.w3.org/2007/05/powder-s#" >
+<!ENTITY voaf "http://labs.mondeca.com/vocab/voaf#" >
+<!ENTITY skos "http://www.w3.org/2004/02/skos/core#" >
+<!ENTITY skosDoc "http://www.w3.org/TR/skos-primer/">
+<!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+<!ENTITY sf "http://sourceforge.net/api/sfelements.rdf#" >
+<!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+<!ENTITY spdx "http://spdx.org/rdf/terms#">
+]>
+
+<!-- ============================================================================================================================================
+	This RDF file contains the rules of DCAT-AP-SK, meant to be loaded into a validator
+ ================================================================================================================================================ -->
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+		xmlns:cc="http://creativecommons.org/ns#"	
+		xmlns:dct="http://purl.org/dc/terms/"
+		xmlns:adms="http://www.w3.org/ns/adms#"
+		xmlns:foaf="http://xmlns.com/foaf/0.1/"
+		xmlns:owl="http://www.w3.org/2002/07/owl#"
+		xmlns:dcat="http://www.w3.org/ns/dcat#"
+		xmlns:sioc="http://rdfs.org/sioc/ns#"
+		xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+		xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+		xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+		xmlns:schema="http://schema.org/"	
+		xmlns:v="http://www.w3.org/2006/vcard/ns#"
+		xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+		xmlns:vann="http://purl.org/vocab/vann/"
+		xmlns:voaf="http://labs.mondeca.com/vocab/voaf#"	
+		xmlns:wdrs="http://www.w3.org/2007/05/powder-s#"	
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+		xmlns:spdx="http://spdx.org/rdf/terms#"
+		xmlns:xhv="&xhv;"
+		xmlns:xh="&xh;"
+		xmlns:res="https://data.gov.sk/def/ontology/resource/"
+		xmlns:id="https://data.gov.sk/def/ontology/identifier/"
+		xmlns:geo="http://www.opengis.net/ont/geosparql#">
+
+	<!-- ================================ -->
+	<!-- ==       MANDATORY CLASSES    == -->
+	<!-- ==        POVINNÉ TRIEDY      == -->
+	<!-- ================================ -->
+
+	<!-- dcat:Catalog   -->	
+	<rdf:Description rdf:about="http://www.w3.org/ns/dcat#Catalog">
+		<res:hasMandatory rdf:resource="http://www.w3.org/ns/dcat#dataset"/>	
+		<res:hasMandatory rdf:resource="http://purl.org/dc/terms/description"/>	
+		<res:hasMandatory rdf:resource="http://purl.org/dc/terms/publisher"/>
+		<res:hasMandatory rdf:resource="http://purl.org/dc/terms/title"/>	
+		<res:hasMandatory rdf:resource="http://purl.org/dc/terms/creator"/>	
+		<res:hasMandatory rdf:resource="https://data.gov.sk/def/ontology/resource/gestor"/>	
+		<res:hasMandatory rdf:resource="http://purl.org/dc/terms/created"/>	
+		
+		<res:hasRecommended rdf:resource="http://xmlns.com/foaf/0.1/homepage"/>			
+		<res:hasRecommended rdf:resource="http://purl.org/dc/terms/language"/>			
+		<res:hasRecommended rdf:resource="http://purl.org/dc/terms/license"/>			
+		<res:hasRecommended rdf:resource="http://purl.org/dc/terms/issued"/>			
+		<res:hasRecommended rdf:resource="http://www.w3.org/ns/dcat#themeTaxonomy"/>			
+		<res:hasRecommended rdf:resource="http://purl.org/dc/terms/modified"/>		
+		
+		<res:hasOptional rdf:resource="http://www.w3.org/ns/dcat#record"/>			
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/rights"/>			
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/spatial"/>			
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/hasPart"/>			
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/isPartOf"/>			
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/contributor"/>			
+	</rdf:Description>	
+	
+	<!-- dcat:Dataset   -->	
+	<rdf:Description rdf:about="http://www.w3.org/ns/dcat#Dataset">
+		<res:hasMandatory rdf:resource="http://purl.org/dc/terms/description"/>	
+		<res:hasMandatory rdf:resource="http://purl.org/dc/terms/title"/>	
+		<res:hasMandatory rdf:resource="http://purl.org/dc/terms/type"/>	
+		<res:hasMandatory rdf:resource="https://data.gov.sk/def/ontology/resource/gestor"/>
+		
+		<res:hasRecommended rdf:resource="https://www.w3.org/ns/dcat#contactPoint"/>		
+		<res:hasRecommended rdf:resource="http://www.w3.org/ns/dcat#distribution"/>	
+		<res:hasRecommended rdf:resource="http://www.w3.org/ns/dcat#keyword"/>
+		<res:hasRecommended rdf:resource="http://purl.org/dc/terms/publisher"/>
+		<res:hasRecommended rdf:resource="http://www.w3.org/ns/dcat#theme"/>
+		
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/conformsTo"/>			
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/acrualPeriodicity"/>			
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/identifier"/>			
+		<res:hasOptional rdf:resource="http://www.w3.org/ns/dcat#landingPage"/>	
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/language"/>			
+		<res:hasOptional rdf:resource="http://www.w3.org/ns/adms#identifier"/>	
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/issued"/>	
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/spatial"/>			
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/temporal"/>	
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/modified"/>		
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/provenance"/>		
+		<res:hasOptional rdf:resource="http://www.w3.org/ns/adms#sample"/>		
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/source"/>		
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/relation"/>		
+		<res:hasOptional rdf:resource="http://www.w3.org/2002/07/owl#versionInfo"/>		
+		<res:hasOptional rdf:resource="http://www.w3.org/ns/adms#versionNotes"/>		
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/isVersionOf"/>		
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/hasVersion"/>		
+		<res:hasOptional rdf:resource="http://xmlns.com/foaf/0.1/page"/>		
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/accessRights"/>	
+
+	</rdf:Description>	
+	
+	<!-- foaf:Agent   -->	
+	<rdf:Description rdf:about="http://xmlns.com/foaf/0.1/Agent">
+		<res:hasMandatory rdf:resource="http://xmlns.com/foaf/0.1/name"/>	
+		
+		<res:hasRecommended rdf:resource="http://purl.org/dc/terms/type"/> 
+	</rdf:Description>	
+	
+	<!-- ================================== -->
+	<!-- ==       RECOMMENDED CLASSES    == -->
+	<!-- ==        ODPORÚČANÉ TRIEDY     == -->
+	<!-- ================================== -->
+	   
+   	<!-- dcat:Distribution -->  	
+	<rdf:Description rdf:about="http://www.w3.org/ns/dcat#Distribution">
+		<res:hasMandatory rdf:resource="http://www.w3.org/ns/dcat#accessURL"/>	
+		<res:hasMandatory rdf:resource="https://data.gov.sk/def/ontology/resource/validFrom"/>	
+		<res:hasMandatory rdf:resource="https://data.gov.sk/def/ontology/resource/distributionOf"/>	
+		<res:hasMandatory rdf:resource="http://purl.org/dc/terms/creator"/>	
+		<res:hasMandatory rdf:resource="http://purl.org/dc/terms/created"/>	
+		<res:hasMandatory rdf:resource="https://www.w3.org/2002/07/owl#versionInfo"/>	
+		<res:hasMandatory rdf:resource="https://www.w3.org/ns/adms#status"/>	
+
+		<res:hasRecommended rdf:resource="http://purl.org/dc/terms/description"/>	
+		<res:hasRecommended rdf:resource="http://purl.org/dc/terms/format"/>	
+		<res:hasRecommended rdf:resource="http://purl.org/dc/terms/license"/>
+		<res:hasRecommended rdf:resource="https://data.gov.sk/def/ontology/resource/validTo"/>
+		<res:hasRecommended rdf:resource="http://www.w3.org/ns/adms#versionNotes"/>
+		
+		<res:hasOptional rdf:resource="http://www.w3.org/ns/dcat#byteSize"/>	
+		<res:hasOptional rdf:resource="http://www.w3.org/ns/dcat#downloadURL"/>	
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/mediaType"/>	
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/issued"/>	
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/rights"/>	
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/title"/>	
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/modified"/>	
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/conformsTo"/>	
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/language"/>
+		<res:hasOptional rdf:resource="http://spdx.org/rdf/terms#checksum"/>	
+		<res:hasOptional rdf:resource="http://xmlns.com/foaf/0.1/page"/>
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/contributor"/>		
+	</rdf:Description>	
+	
+   	<!-- skos:Concept -->  	
+	<rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#Concept">
+		<res:hasMandatory rdf:resource="http://www.w3.org/2004/02/skos/core#prefLabel"/>	
+	</rdf:Description>	
+	
+	<!-- dct:LicenseDocument -->
+	<rdf:Description rdf:about="http://purl.org/dc/terms/LicenseDocument">
+		<res:hasRecommended rdf:resource="http://purl.org/dc/terms/type"/> 
+	</rdf:Description>	
+	
+	<!-- skos:ConceptScheme -->
+	<rdf:Description rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme">
+		<res:hasMandatory rdf:resource="http://purl.org/dc/terms/title"/>	
+	</rdf:Description>	
+	
+	<!-- ================================ -->
+	<!-- ==      OPTIONAL CLASSES      == -->
+	<!-- ==      NEPOVINNÉ TRIEDY      == -->
+	<!-- ================================ -->	
+	
+	<!-- dcat:CatalogRecord  -->	
+	<rdf:Description rdf:about="http://www.w3.org/ns/dcat#CatalogRecord">
+		<res:hasMandatory rdf:resource="http://xmlns.com/foaf/0.1/primaryTopic"/>	
+		<res:hasMandatory rdf:resource="http://purl.org/dc/terms/modified"/>	
+		
+		<res:hasRecommended rdf:resource="http://purl.org/dc/terms/issued"/>	
+		<res:hasRecommended rdf:resource="http://www.w3.org/ns/adms#status"/>	
+		<res:hasRecommended rdf:resource="http://purl.org/dc/terms/conformsTo"/>
+		
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/description"/>	
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/title"/>	
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/language"/>	
+		<res:hasOptional rdf:resource="http://purl.org/dc/terms/source"/>	
+	</rdf:Description>		
+	
+	<!-- spdx:Checksum -->	
+	<rdf:Description rdf:about="http://spdx.org/rdf/terms#Checksum">
+		<res:hasMandatory rdf:resource="http://spdx.org/rdf/terms#algorithm"/>	
+		<res:hasMandatory rdf:resource="http://spdx.org/rdf/terms#checksumValue"/>		
+	</rdf:Description>	
+
+	<!-- adms:Identifier  -->
+	<rdf:Description rdf:about="https://www.w3.org/ns/adms#Identifier">
+		<res:hasMandatory rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>	
+	</rdf:Description>
+
+	<!-- dct:PeriodOfTime  -->
+	<rdf:Description rdf:about="http://purl.org/dc/terms/PeriodOfTime">
+		<res:hasOptional rdf:resource="http://schema.org/startDate"/>	
+		<res:hasOptional rdf:resource="http://schema.org/endDate"/>	
+	</rdf:Description>	
+	
+	<!-- =========================== -->
+	<!-- ==      ADMS CLASSES     == -->
+	<!-- ==      ADMS TRIEDY      == -->
+	<!-- =========================== -->	
+
+  <rdfs:Class rdf:about="http://www.w3.org/ns/adms#AssetRepository">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Catalog" />
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.w3.org/ns/adms#Asset">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset" />
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.w3.org/ns/adms#AssetDistribution">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution" />
+  </rdfs:Class>	
+	
+</rdf:RDF>

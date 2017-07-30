@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+]>
+
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+   xmlns:dct="http://purl.org/dc/terms/"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:adms="http://www.w3.org/ns/adms#"
+   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+   xmlns:geo="http://www.w3.org/2003/01/geo/wgs84_pos#"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:schema="http://schema.org/"
+   xmlns:res="https://data.gov.sk/def/ontology/resource/"
+   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+   xmlns:dcat="http://www.w3.org/ns/dcat#">
+
+
+   <!-- Ontológie -->
+  
+  <adms:AssetRepository rdf:about="https://data.gov.sk/set/catalog/ontology">
+    <dct:creator rdf:resource="http://www.linkedin.com/in/miroslavliska" />
+    <dct:contributor rdf:resource="http://www.linkedin.com/in/mareksurek" />
+    <dct:created rdf:datatype="&xsd;dateTime">2015-10-26T00:00:00Z</dct:created>
+    <dct:modified rdf:datatype="&xsd;dateTime">2015-12-15T00:00:00Z</dct:modified>
+    <dct:title xml:lang="sk">Katalóg ontológií data.gov.sk</dct:title>
+    <dct:title xml:lang="en">data.gov.sk Ontologies Catalog</dct:title>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/resource"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/identifier"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/location"/>    
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/physical-person"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/entrepreneur"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/organization"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/egov"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/ikt"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/finance"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/healthcare"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/culture"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/def/ontology/environment"/>
+  </adms:AssetRepository>
+ 
+  <adms:Asset rdf:about="https://data.gov.sk/def/ontology/resource">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dct:title xml:lang="sk">data.gov.sk Ontológia referencovateľného zdroja</dct:title>
+    <dct:title xml:lang="en">data.gov.sk Resource Ontology</dct:title>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+    <dcat:theme rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </adms:Asset>
+
+  <adms:Asset rdf:about="https://data.gov.sk/def/ontology/identifier">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dct:title xml:lang="sk">data.gov.sk Ontológia identifikátora</dct:title>
+    <dct:title xml:lang="en">data.gov.sk Identifier Ontology</dct:title>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+    <dcat:theme rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </adms:Asset>
+
+  <adms:Asset rdf:about="https://data.gov.sk/def/ontology/location">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dct:title xml:lang="sk">data.gov.sk Ontológia lokácie</dct:title>
+    <dct:title xml:lang="en">data.gov.sk Location Ontology</dct:title>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+    <dcat:theme rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </adms:Asset>
+ 
+  <adms:Asset rdf:about="https://data.gov.sk/def/ontology/physical-person">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dct:title xml:lang="sk">data.gov.sk Ontológia fyzickej osoby</dct:title>
+    <dct:title xml:lang="en">data.gov.sk Physical Person Ontology</dct:title>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+    <dcat:theme rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </adms:Asset>
+
+  <adms:Asset rdf:about="https://data.gov.sk/def/ontology/legal-subject">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dct:title xml:lang="sk">Ontológia data.gov.sk organizácie</dct:title>
+    <dct:title xml:lang="en">data.gov.sk Organization Ontology</dct:title>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+    <dcat:theme  rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>    
+  </adms:Asset>
+    
+  <adms:Asset rdf:about="https://data.gov.sk/def/ontology/egov">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dct:title xml:lang="sk">data.gov.sk Ontológia EGOV entít</dct:title>
+    <dct:title xml:lang="en">data.gov.sk EGOV Elements Ontology</dct:title>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+    <dcat:theme  rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </adms:Asset>
+
+  <adms:Asset rdf:about="https://data.gov.sk/def/ontology/ikt">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dct:title xml:lang="sk">data.gov.sk Ontológia IKT entít</dct:title>
+    <dct:title xml:lang="en">data.gov.sk IKT Elements Ontology</dct:title>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+    <dcat:theme  rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </adms:Asset>
+
+  <adms:Asset rdf:about="https://data.gov.sk/def/ontology/healthcare">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dct:title xml:lang="sk">data.gov.sk Ontológia entít zdravotnej starostlivosti</dct:title>
+    <dct:title xml:lang="en">data.gov.sk Healthcare Elements Ontology</dct:title>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00165565"/>
+    <dcat:theme  rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </adms:Asset>
+  
+  <adms:Asset rdf:about="https://data.gov.sk/def/ontology/culture">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dct:title xml:lang="sk">data.gov.sk Ontológia entít kultúry</dct:title>
+    <dct:title xml:lang="en">data.gov.sk Culture Elements Ontology</dct:title>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00165182"/>
+    <dcat:theme  rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </adms:Asset>
+  
+  <adms:Asset rdf:about="https://data.gov.sk/def/ontology/environment">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dct:title xml:lang="sk">data.gov.sk Ontológia entít životného prostredia</dct:title>
+    <dct:title xml:lang="en">data.gov.sk Environment Elements Ontology</dct:title>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00165182"/>
+    <dcat:theme  rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </adms:Asset>
+  
+  <adms:Asset rdf:about="https://data.gov.sk/def/ontology/finance">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Ontology"/>
+    <dct:title xml:lang="sk">data.gov.sk Ontológia entít financií</dct:title>
+    <dct:title xml:lang="en">data.gov.sk Finance Elements Ontology</dct:title>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00165182"/>
+    <dcat:theme  rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </adms:Asset>
+
+  <!-- Katalóg datasetov obsahujúcich mapovania data.gov.sk URI -->
+  
+ <adms:AssetRepository rdf:about="https://data.gov.sk/set/catalog/mapping">
+    <dct:creator rdf:resource="http://www.linkedin.com/in/miroslavliska" />
+    <dct:contributor rdf:resource="http://www.linkedin.com/in/mareksurek" />
+    <dct:created rdf:datatype="&xsd;dateTime">2015-11-12T00:00:00Z</dct:created>
+    <dct:modified rdf:datatype="&xsd;dateTime">2015-11-12T00:00:00Z</dct:modified>
+    <dct:title xml:lang="sk">Katalóg datasetov obsahujúcich mapovania data.gov.sk URI</dct:title>
+    <dct:title xml:lang="en">data.gov.sk URI Mappings Catalog</dct:title>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/mapping/lau1-county"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/mapping/lau1-stat-county"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/mapping/lau2-municipality"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/mapping/lau2-stat-municipality"/>  
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/mapping/lau1-county"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/mapping/nuts3-region"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/mapping/nuts3-stat-region"/>
+    <dcat:dataset rdf:resource="https://data.gov.sk/set/mapping/odp5star"/>
+ </adms:AssetRepository>
+
+ <adms:Asset rdf:about="https://data.gov.sk/set/mapping/nuts3-region">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Mapping"/>
+    <dct:title xml:lang="sk">Mapovanie medzi SK NUTS3 (CL0023) a krajmi v Registri adries</dct:title>
+    <dcat:theme  rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+ </adms:Asset>
+ 
+ <adms:Asset rdf:about="https://data.gov.sk/set/mapping/nuts3-stat-region">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Mapping"/>
+    <dct:title xml:lang="sk">Mapovanie medzi SK NUTS3 (CL0023) a pôvodnou identifikáciou krajov SR (CL0049)</dct:title>
+    <dcat:theme  rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+ </adms:Asset>
+
+  <adms:Asset rdf:about="https://data.gov.sk/set/mapping/lau1-county">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Mapping"/>
+    <dct:title xml:lang="sk">Mapovanie medzi SK LAU1  (CL0024) a okresmi v Registri adries</dct:title>
+    <dcat:theme  rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+ </adms:Asset>
+ 
+ <adms:Asset rdf:about="https://data.gov.sk/set/mapping/lau1-stat-county">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Mapping"/>
+    <dct:title xml:lang="sk">Mapovanie medzi SK LAU1 (CL0024)a pôvodnou identifikáciou okresov SR (CL0048)</dct:title>
+    <dcat:theme  rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+ </adms:Asset>
+
+<adms:Asset rdf:about="https://data.gov.sk/set/mapping/lau2-municipality">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Mapping"/>
+    <dct:title xml:lang="sk">Mapovanie medzi SK LAU2 (CL0025) a obcami v Registri adries</dct:title>
+    <dcat:theme  rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+ </adms:Asset> 
+ 
+<adms:Asset rdf:about="https://data.gov.sk/set/mapping/lau2-stat-municipality">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Mapping"/>
+    <dct:title xml:lang="sk">Mapovanie medzi SK LAU2 (CL0025) a pôvodnou identifikáciou krajov SR (CL0051)</dct:title>
+    <dcat:theme  rdf:resource="http://www.w3.org/2002/07/owl#sameAs"/>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+ </adms:Asset>
+  
+ <adms:Asset rdf:about="https://data.gov.sk/set/mapping/data.gov.sk-semic">
+    <dct:type rdf:resource="http://purl.org/adms/assettype/Mapping"/>
+    <dct:title xml:lang="sk">Mapovanie data.gov.sk ontológií na SEMIC</dct:title>
+    <dcat:theme  rdf:resource="http://www.w3.org/2000/01/rdf-schema#subClassOf"/>
+    <dcat:theme  rdf:resource="http://www.w3.org/2000/01/rdf-schema#subPropertyOf"/>
+    <res:gestor rdf:resource="https://data.gov.sk/id/legal-subject/00151742"/>
+  </adms:Asset> 
+
+</rdf:RDF>
